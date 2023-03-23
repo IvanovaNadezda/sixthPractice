@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">fifthPractice</string>
+    <string name="chooseTypeOfOwl">Выберите вид совы</string>
+    <string name="typeOfOwl">Вид совы</string>
+    <string name="chooseTypeOfFodder">Выберите корм совы</string>
+    <string name="typeOfFodder">Виды корма</string>
+    <string name="infAboutOwl">Полезные данные о совах</string>
+    <string name="viborReit">Выберите рейтинг совы</string>
+    <string name="sipuha">Сипуха\nРейтинг 5</string>
+    <string name="filin">Филин\nРейтинг 3</string>
+    <string name="dlinnohvostayaNeyasit">Длиннохвостая неясыть\nРейтинг 2</string>
+    <string name="rijayaNeyasit">Рыжая неясыть\nРейтинг 1</string>
+</resources>
