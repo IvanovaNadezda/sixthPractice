@@ -24,7 +24,7 @@ import com.example.sixthpractice.databinding.Screen1Binding;
 public class FragmentScreen1 extends Fragment {
     Screen1Binding binding;
 
-    private static final String CHANNEL = "CHANNEL";
+    private static final String CHANNEL_ID = "channel_id";
     private static final int NOTIFICATION_ID = 1;
 
     public FragmentScreen1() {
@@ -46,7 +46,7 @@ public class FragmentScreen1 extends Fragment {
             CharSequence name = "МОЙ КАНАЛ";
             String description = "КАНАЛ ДЛЯ УВЕДОМЛЕНИЙ";
             int importance = NotificationManager.IMPORTANCE_DEFAULT;
-            NotificationChannel channel = new NotificationChannel(CHANNEL, name, importance);
+            NotificationChannel channel = new NotificationChannel(CHANNEL_ID, name, importance);
             channel.setDescription(description);
             NotificationManager notificationManager = requireContext().
                     getSystemService(NotificationManager.class);
@@ -70,7 +70,7 @@ public class FragmentScreen1 extends Fragment {
                 }
                 // Создаем уведомление
                 NotificationCompat.Builder builder = new NotificationCompat.Builder(requireContext(),
-                        CHANNEL)
+                        CHANNEL_ID)
                         .setSmallIcon(R.drawable.owl)
                         .setContentText("Вы не забыли покормить сову?")
                         .setPriority(NotificationCompat.PRIORITY_DEFAULT);
