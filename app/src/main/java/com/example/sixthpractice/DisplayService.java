@@ -13,6 +13,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.WindowManager;
 
+import com.example.sixthpractice.ui.activities.MainActivity;
+
 public class DisplayService extends Service {
 
     private WindowManager mWindowManager;

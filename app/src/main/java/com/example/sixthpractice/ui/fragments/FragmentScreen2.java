@@ -1,4 +1,4 @@
-package com.example.sixthpractice;
+package com.example.sixthpractice.ui.fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,19 +11,20 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 
-import com.example.sixthpractice.databinding.Screen3Binding;
+import com.example.sixthpractice.R;
+import com.example.sixthpractice.databinding.Screen2Binding;
 
 
-public class FragmentScreen3 extends Fragment {
-    Screen3Binding binding;
-    public FragmentScreen3()
+public class FragmentScreen2 extends Fragment {
+    Screen2Binding binding;
+    public FragmentScreen2()
     {
-        super(R.layout.screen3);
+        super(R.layout.screen2);
     }
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        binding = Screen3Binding.inflate(inflater, container, false);
+        binding = Screen2Binding.inflate(inflater, container, false);
         return binding.getRoot();
     }
     @Override
@@ -31,12 +32,13 @@ public class FragmentScreen3 extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         // Выбираем рейтинг
         binding.ratingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
+            // Передаем данные обратно
             @Override
             public void onRatingChanged(RatingBar ratingBar, float v, boolean b) {
+                // Передача данных из второй активности в первую
                 Bundle bundle = new Bundle();
-                // Передаем данные из третьей активности в первую
-                bundle.putFloat("rating3",  binding.ratingBar.getRating());
-                Navigation.findNavController(view).navigate(R.id.action_third_fragment_to_first_fragment,bundle);
+                bundle.putFloat("rating2",  binding.ratingBar.getRating());
+                Navigation.findNavController(view).navigate(R.id.action_second_fragment_to_first_fragment,bundle);
             }
         });
 

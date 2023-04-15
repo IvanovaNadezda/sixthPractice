@@ -1,4 +1,4 @@
-package com.example.sixthpractice;
+package com.example.sixthpractice.ui.fragments;
 
 
 import android.app.NotificationChannel;
@@ -19,7 +19,9 @@ import androidx.core.app.NotificationManagerCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
+import com.example.sixthpractice.R;
 import com.example.sixthpractice.databinding.Screen1Binding;
+import com.example.sixthpractice.ui.activities.MainActivity;
 
 public class FragmentScreen1 extends Fragment {
     Screen1Binding binding;

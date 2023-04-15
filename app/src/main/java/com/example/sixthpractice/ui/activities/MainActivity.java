@@ -1,8 +1,10 @@
-package com.example.sixthpractice;
+package com.example.sixthpractice.ui.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.sixthpractice.R;
 
 public class MainActivity extends AppCompatActivity {
 
