@@ -12,11 +12,14 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 
 import com.example.sixthpractice.R;
+import com.example.sixthpractice.data.Owl;
 import com.example.sixthpractice.databinding.Screen3Binding;
 
 
 public class FragmentScreen3 extends Fragment {
     Screen3Binding binding;
+
+
     public FragmentScreen3()
     {
         super(R.layout.screen3);
