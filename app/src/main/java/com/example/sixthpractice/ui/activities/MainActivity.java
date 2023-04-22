@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.example.sixthpractice.R;
-import com.example.sixthpractice.data.Owl;
 
 public class MainActivity extends AppCompatActivity {
 
