@@ -41,7 +41,7 @@ public class NewFodderFragment extends Fragment {
                 binding.editTextAuthor.setError(null);
                 bundle.putString("RESULT_OK_NAME", authorName);
                 bundle.putInt("RESULT_OK_IMG", R.drawable.beatle);
-                Navigation.findNavController(view).navigate(R.id.action_new_author_fragment_to_author_list_fragment,bundle);
+                Navigation.findNavController(view).navigate(R.id.action_fodder_list_fragment_to_new_fodder_fragment, bundle);
             }
             else {
                 binding.editTextAuthor.setError("Пустая строка!");

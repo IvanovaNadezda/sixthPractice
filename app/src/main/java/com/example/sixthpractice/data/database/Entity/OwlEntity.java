@@ -1,9 +1,7 @@
 package com.example.sixthpractice.data.database.Entity;
-
 import androidx.annotation.NonNull;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
-
 import com.example.sixthpractice.data.models.Owl;
 
 @Entity(tableName = "owl_table")
@@ -11,14 +9,11 @@ public class OwlEntity {
     @PrimaryKey(autoGenerate = true)
     private int id;
     private String name;
-
     public String getType() {
         return type;
     }
-
     private String type;
     private int cover;
-
     public OwlEntity(@NonNull String name, String type, int cover) {
         this.name = name;
         this.type = type;

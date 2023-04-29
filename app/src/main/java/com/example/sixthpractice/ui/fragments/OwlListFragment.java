@@ -38,9 +38,9 @@ public class OwlListFragment extends Fragment {
         binding = OwlListBinding.inflate(inflater, container, false);
         myCustomListAdapter = new MyCustomListAdapter();// создание адаптера
         Bundle args = getArguments();
-        if (args != null && args.containsKey("RESULT_OK_NAME") && args.containsKey("RESULT_OK_IMG")&& args.containsKey("RESULT_OK_AUTHOR")) {
-            Owl author = new Owl(args.getString("RESULT_OK_NAME"), args.getString("RESULT_OK_TYPE"),args.getInt("RESULT_OK_IMG"));
-            owlListViewModel.insert(author);
+        if (args != null && args.containsKey("RESULT_OK_NAME") && args.containsKey("RESULT_OK_IMG")&& args.containsKey("RESULT_OK_TYPE")) {
+            Owl type = new Owl(args.getString("RESULT_OK_NAME"), args.getString("RESULT_OK_TYPE"),args.getInt("RESULT_OK_IMG"));
+            owlListViewModel.insert(type);
         }
         if (args != null && args.containsKey("Rating"))
         {

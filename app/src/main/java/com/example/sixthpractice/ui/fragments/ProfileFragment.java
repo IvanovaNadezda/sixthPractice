@@ -62,14 +62,9 @@ public class ProfileFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        binding.button4.setOnClickListener(v -> Navigation.findNavController(view).
-                navigate(R.id.action_profile_fragment_to_fodder_list_fragment));
-        binding.button4.setOnClickListener(v -> {
-            ProfileViewModel.createFileAppSpecific(requireContext(), "",
-                    binding.editText.getText());
-        });
 
-        ProfileViewModel.createFileSharedPreferences(requireContext(), "name", binding.editText.getText().toString());
+
+
 
         sharedPreferences = getActivity().getSharedPreferences("name",Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();

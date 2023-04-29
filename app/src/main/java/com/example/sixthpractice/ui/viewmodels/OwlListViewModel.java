@@ -24,8 +24,6 @@ public class OwlListViewModel extends AndroidViewModel {
         mAllBooks = mRepository.getAllOwls();
     }
 
-
-
     public LiveData<List<Owl>> getAllOwls() { return mAllBooks; }
 
     public void insert(Owl owl) { mRepository.insert(new OwlEntity(owl.getName(), owl.getName(), owl.getImage())); }
