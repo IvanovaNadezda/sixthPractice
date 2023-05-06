@@ -35,8 +35,6 @@ public class SingleFodderFragment extends Fragment {
                         .navigate(R.id.action_single_author_fragment_to_author_list_fragment, bundle);
             }
         });
-
-
     }
 
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,

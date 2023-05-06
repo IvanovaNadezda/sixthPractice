@@ -9,11 +9,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
-import android.provider.Settings;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -29,11 +27,8 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 
 import com.example.sixthpractice.R;
-import com.example.sixthpractice.ServiceClass;
 import com.example.sixthpractice.databinding.Screen1Binding;
 import com.example.sixthpractice.ui.activities.MainActivity;
-import com.example.sixthpractice.ui.viewmodels.OwlListViewModel;
-import com.example.sixthpractice.ui.viewmodels.ProfileViewModel;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -75,7 +70,7 @@ public class ProfileFragment extends Fragment {
         String fileName = "userName.txt";
 
         //Запись файла в app-specific storage
-        createFileAppScecificStorage(fileName,text);
+        //createFileAppScecificStorage(fileName,text);
 
         //Запись файла в общем хранилище
         createFileExternalStorage(fileName,text);
@@ -157,16 +152,16 @@ public class ProfileFragment extends Fragment {
                 requestCode, permissions, grantResults
         );
     }
-    void createFileAppScecificStorage(String fileName, String text)
-    {
-        Context context = getContext();
-        try (FileOutputStream fos = context.openFileOutput(fileName, Context.MODE_PRIVATE)) {
-            fos.write(text.getBytes());
-              Toast.makeText(context, "Был создан текстовый файл в общем хранилище  "
-                   + context.getDataDir().getAbsolutePath()+"/"
-                   + fileName, Toast.LENGTH_SHORT).show();
-        } catch (IOException e) {throw new RuntimeException(e);}
-    }
+//    void createFileAppScecificStorage(String fileName, String text)
+//    {
+//        Context context = getContext();
+//        try (FileOutputStream fos = context.openFileOutput(fileName, Context.MODE_PRIVATE)) {
+//            fos.write(text.getBytes());
+//              Toast.makeText(context, "Был создан текстовый файл в общем хранилище  "
+//                   + context.getDataDir().getAbsolutePath()+"/"
+//                   + fileName, Toast.LENGTH_SHORT).show();
+//        } catch (IOException e) {throw new RuntimeException(e);}
+//    }
 
     void createFileExternalStorage(String fileName, String text) {
         Context context = getContext();
