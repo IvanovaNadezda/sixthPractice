@@ -2,10 +2,16 @@ package com.example.sixthpractice.data.database;
 
 import static java.security.AccessController.getContext;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.os.Environment;
 import android.widget.Toast;
+
+import androidx.core.app.ActivityCompat;
+
+import com.example.sixthpractice.Manifest;
 
 import java.io.File;
 import java.io.FileOutputStream;

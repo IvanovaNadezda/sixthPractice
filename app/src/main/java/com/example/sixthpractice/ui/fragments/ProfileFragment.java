@@ -37,7 +37,7 @@ import java.io.IOException;
 public class ProfileFragment extends Fragment {
     Screen1Binding binding;
     private static final String CHANNEL_ID = "my_channel";
-    SharedPreferences sharedPreferences;
+
     private static final int PERMISSION_REQUEST_CODE = 1;
     private static final int NOTIFICATION_ID = 1;
 
@@ -61,19 +61,8 @@ public class ProfileFragment extends Fragment {
 
 
 
-        sharedPreferences = getActivity().getSharedPreferences("name",Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
 
-        binding.editText.setText(sharedPreferences.getString("name",null));
 
-        String text  = binding.editText.getText().toString();
-        String fileName = "userName.txt";
-
-        //Запись файла в app-specific storage
-        //createFileAppScecificStorage(fileName,text);
-
-        //Запись файла в общем хранилище
-        createFileExternalStorage(fileName,text);
 
         binding.button6.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -163,28 +152,7 @@ public class ProfileFragment extends Fragment {
 //        } catch (IOException e) {throw new RuntimeException(e);}
 //    }
 
-    void createFileExternalStorage(String fileName, String text) {
-        Context context = getContext();
-        if (context.getApplicationContext().checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE)
-                == PackageManager.PERMISSION_GRANTED) {
-            File filePath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);
-            File file = new File(filePath, fileName);
-            FileOutputStream outputStream;
-            try {
-                outputStream = new FileOutputStream(file);
-                outputStream.write(text.getBytes());
-                Toast.makeText(context, "Был создан текстовый файл в общем хранилище " + filePath +
-                        "/"+ fileName, Toast.LENGTH_SHORT).show();
-                outputStream.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-        else {
-            ActivityCompat.requestPermissions(getActivity(), new String[] {Manifest.permission.WRITE_EXTERNAL_STORAGE},1 );
-        }
 
-    }
 
 
 
