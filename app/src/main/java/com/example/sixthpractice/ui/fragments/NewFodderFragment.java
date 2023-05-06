@@ -1,14 +1,11 @@
 package com.example.sixthpractice.ui.fragments;
 
-import static java.security.AccessController.getContext;
-
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -17,8 +14,6 @@ import androidx.navigation.Navigation;
 import androidx.room.RoomSQLiteQuery;
 
 import com.example.sixthpractice.R;
-import com.example.sixthpractice.data.database.Entity.OwlEntity;
-import com.example.sixthpractice.data.repository.OwlRepository;
 import com.example.sixthpractice.databinding.NewFodderFragmentBinding;
 
 public class NewFodderFragment extends Fragment {

@@ -38,6 +38,8 @@ public class OwlListFragment extends Fragment {
         binding = OwlListBinding.inflate(inflater, container, false);
         myCustomListAdapter = new MyCustomListAdapter();// создание адаптера
         Bundle args = getArguments();
+        String owlName = "MY_OWL";
+        OwlListViewModel owlM = new OwlListViewModel(getActivity().getApplication());
         if (args != null && args.containsKey("RESULT_OK_NAME") && args.containsKey("RESULT_OK_IMG")&& args.containsKey("RESULT_OK_TYPE")) {
             Owl type = new Owl(args.getString("RESULT_OK_NAME"), args.getString("RESULT_OK_TYPE"),args.getInt("RESULT_OK_IMG"));
             owlListViewModel.insert(type);
@@ -46,6 +48,12 @@ public class OwlListFragment extends Fragment {
         {
             Toast.makeText(getContext(), "Вы оценили сову на "+getArguments().getFloat("Rating"), Toast.LENGTH_SHORT).show();
         }
+
+        owlM.setAddress(getContext(), "my_file", owlName);
+
+        owlM.setAddress1(getContext(), "my_file", owlName);
+
+        owlM.setAddress2(getActivity(), "my_file", owlName);
 
         return binding.getRoot();
     }

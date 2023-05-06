@@ -1,4 +1,4 @@
-package com.example.sixthpractice.data.database.dao;
+package com.example.sixthpractice.data.datasources.dao;
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
@@ -6,7 +6,7 @@ import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 
-import com.example.sixthpractice.data.database.Entity.FodderEntity;
+import com.example.sixthpractice.data.datasources.Entity.FodderEntity;
 
 import java.util.List;
 

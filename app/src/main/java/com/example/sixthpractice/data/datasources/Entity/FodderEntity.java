@@ -1,4 +1,4 @@
-package com.example.sixthpractice.data.database.Entity;
+package com.example.sixthpractice.data.datasources.Entity;
 
 import androidx.annotation.NonNull;
 import androidx.room.Entity;

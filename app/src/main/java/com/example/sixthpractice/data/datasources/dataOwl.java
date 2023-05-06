@@ -1,6 +1,4 @@
-package com.example.sixthpractice.data.database;
-
-import static java.security.AccessController.getContext;
+package com.example.sixthpractice.data.datasources;
 
 import android.app.Activity;
 import android.content.Context;
@@ -10,6 +8,7 @@ import android.os.Environment;
 import android.widget.Toast;
 
 import androidx.core.app.ActivityCompat;
+
 
 import com.example.sixthpractice.Manifest;
 
@@ -30,14 +29,14 @@ public class dataOwl {
         } catch (IOException e) {throw new RuntimeException(e);}
     }
 
-    public void createFileSharedPreferences(Context cont, String fName, String fContent){
+    public static void createFileSharedPreferences(Context cont, String fName, String fContent){
         SharedPreferences settings = cont.getSharedPreferences(fName, Context.MODE_PRIVATE);
         SharedPreferences.Editor ed = settings.edit();
         ed.putString("name", fContent);
         ed.apply();
     }
 
-    public void createFileExtWithToast(Activity activity, String fileName, String fileContent) {
+    public static void createFileExtWithToast(Activity activity, String fileName, String fileContent) {
         Context context = activity.getApplicationContext();
         if (context.getApplicationContext().checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE)
                 == PackageManager.PERMISSION_GRANTED) {

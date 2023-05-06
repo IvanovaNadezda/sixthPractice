@@ -76,13 +76,7 @@ public class ProfileFragment extends Fragment {
                 Navigation.findNavController(view).navigate(R.id.action_profile_fragment_to_book_list_fragment);
             }
         });
-        binding.saveBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                editor.putString("name", binding.editText.getText().toString());
-                editor.apply();
-            }
-        });
+
         // Создаем канал уведомлений (для Android 8.0 и выше)
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             CharSequence name = "Мой канал";
@@ -141,20 +135,6 @@ public class ProfileFragment extends Fragment {
                 requestCode, permissions, grantResults
         );
     }
-//    void createFileAppScecificStorage(String fileName, String text)
-//    {
-//        Context context = getContext();
-//        try (FileOutputStream fos = context.openFileOutput(fileName, Context.MODE_PRIVATE)) {
-//            fos.write(text.getBytes());
-//              Toast.makeText(context, "Был создан текстовый файл в общем хранилище  "
-//                   + context.getDataDir().getAbsolutePath()+"/"
-//                   + fileName, Toast.LENGTH_SHORT).show();
-//        } catch (IOException e) {throw new RuntimeException(e);}
-//    }
-
-
-
-
 
 
 }

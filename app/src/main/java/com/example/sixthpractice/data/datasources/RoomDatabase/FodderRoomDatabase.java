@@ -1,4 +1,4 @@
-package com.example.sixthpractice.data.database.RoomDatabase;
+package com.example.sixthpractice.data.datasources.RoomDatabase;
 
 import android.content.Context;
 
@@ -9,8 +9,8 @@ import androidx.room.RoomDatabase;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 
 import com.example.sixthpractice.R;
-import com.example.sixthpractice.data.database.Entity.FodderEntity;
-import com.example.sixthpractice.data.database.dao.FodderDao;
+import com.example.sixthpractice.data.datasources.Entity.FodderEntity;
+import com.example.sixthpractice.data.datasources.dao.FodderDao;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

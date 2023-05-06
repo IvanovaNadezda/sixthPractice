@@ -5,16 +5,19 @@ import android.content.Context;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.Transformations;
 
-import com.example.sixthpractice.data.database.Entity.FodderEntity;
-import com.example.sixthpractice.data.database.RoomDatabase.FodderRoomDatabase;
-import com.example.sixthpractice.data.database.dao.FodderDao;
+import com.example.sixthpractice.data.datasources.Entity.FodderEntity;
+import com.example.sixthpractice.data.datasources.RoomDatabase.FodderRoomDatabase;
+import com.example.sixthpractice.data.datasources.dao.FodderDao;
 import com.example.sixthpractice.data.models.Fodder;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 public class FodderRepository {
     private final FodderDao mFodderDao;
+
+
     private final LiveData<List<Fodder>> mAllFodders;
 
     private final Context context;
